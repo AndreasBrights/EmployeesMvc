@@ -8,10 +8,11 @@ namespace EmployeesMvc.Models
 		[Required(ErrorMessage ="Skriv anställdas namn")]
         [StringLength(20, MinimumLength = 2, ErrorMessage ="Måste vara mellan 2-20")]
         public string Name { get; set; }
+       
 
-       // [Display(Email = "test")]
-        
-        [Required(ErrorMessage ="Skriv anställdas Email")]
+        //[Display(Email = "t")]
+        [DataType(DataType.EmailAddress)]
+        [Required(ErrorMessage = "Skriv anställdas Email")]
         [EmailAddress]
         public string Email { get; set; }
         

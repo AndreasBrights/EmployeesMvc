@@ -28,10 +28,10 @@ namespace EmployeesMvc.Controllers
 		[HttpPost("")]
 		public IActionResult Add(Employee employee)
 		{
-            //if (!ModelState.IsValid)
-            //    return View();
+            if (!ModelState.IsValid)
+                return View(nameof(Create));
 
-			dataService.Add(employee);
+            dataService.Add(employee);
 			return RedirectToAction(nameof(Index));
 		}
 
