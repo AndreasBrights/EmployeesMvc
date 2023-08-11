@@ -5,18 +5,19 @@ namespace EmployeesMvc.Models
     {
 		[Display(Name = "Skriv namn")]
 		[DataType(DataType.MultilineText)]
-		[Required(ErrorMessage ="Skriv anställdas namn")]
+		[Required(ErrorMessage ="Namn är tomt")]
         [StringLength(20, MinimumLength = 2, ErrorMessage ="Måste vara mellan 2-20")]
         public string Name { get; set; }
        
 
-        //[Display(Email = "t")]
+        [Display(Name = "Skriv Email")]
         [DataType(DataType.EmailAddress)]
-        [Required(ErrorMessage = "Skriv anställdas Email")]
+        [Required(ErrorMessage = "Email är tomt")]
         [EmailAddress]
         public string Email { get; set; }
         
         public int Id { get; set; }
+        public string Details { get; set; }
 
 
     }

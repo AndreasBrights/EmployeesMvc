@@ -20,9 +20,9 @@ namespace EmployeesMvc.Controllers
         }
 
 		[HttpGet("/Create")]
-		public IActionResult Create(Employee employee)
+		public IActionResult Create()
 		{
-			return View(employee);
+			return View();
 		}
 
 		[HttpPost("")]
@@ -33,6 +33,12 @@ namespace EmployeesMvc.Controllers
 
             dataService.Add(employee);
 			return RedirectToAction(nameof(Index));
+		}
+
+		[HttpGet("/Details")]
+		public IActionResult Details(Employee employee)
+		{
+			return View(employee);
 		}
 
 	}

@@ -4,28 +4,28 @@
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="utf-8" />
-    <title>Employees </title>
-    <link rel="stylesheet" href="https://unpkg.com/@@picocss/pico@@latest/css/pico.classless.min.css">
+	<meta charset="utf-8" />
+	<title>Employees </title>
+	<link rel="stylesheet" href="https://unpkg.com/@@picocss/pico@@latest/css/pico.classless.min.css">
 </head>
 <body>
-    <main>
-    <h2>Anställd</h2>
+	<main>
+		<h2>Anställd</h2>
 		<form asp-controller="Employees" asp-action="Add">
 			<div>
-			<label asp-for="Name"></label>
-			<span asp-validation-for="Name"></span>
-			<input asp-for="Name">
-			</div> <br/>
+				<label asp-for="Name"></label>
+				<span asp-validation-for="Name"></span>
+				<input asp-for="Name">
+			</div> <br />
 
 			<div>
-			<label asp-for="Email">Email</label>
-			<span asp-validation-for="Email"></span>
-			<input asp-for="Email">
+				<label asp-for="Email">Email</label>
+				<span asp-validation-for="Email"></span>
+				<input asp-for="Email">
 			</div>
-			<div asp-validation-summary="All"></div>
+			@*<div asp-validation-summary=""></div>*@
 			<button>Lägg till anställd</button>
 		</form>
-  </main>
+	</main>
 </body>
 </html>

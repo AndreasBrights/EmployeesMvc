@@ -13,15 +13,20 @@
 	<main>
 		<h2>Anställda</h2>
 		<ul>
-			@foreach (var item in Model)
+			@foreach (var Employee in Model)
 			{
 				<li>
-					@item.Name
+					<a asp-controller="Employees" asp-action="Details">
+					@Employee.Name 
+					<br/>
+					@Employee.Email
+					<br/>
+					</a>
 				</li>
 			}
 		</ul>
 
-		<a href="/Create"> Lägg till Anställd</a>
+		<a asp-controller="Employees" asp-action="Create"> Lägg till Anställd</a>
 
 
 
