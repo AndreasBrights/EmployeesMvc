@@ -1,0 +1,32 @@
+﻿@model EmployeesMvc.Models.Employee[]
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+	<meta charset="utf-8" />
+	<title>Employees </title>
+	<link rel="stylesheet" href="https://unpkg.com/@@picocss/pico@@latest/css/pico.classless.min.css">
+</head>
+<body>
+	<main>
+		<h2>Anställda</h2>
+		<ul>
+			@foreach (var item in Model)
+			{
+				<li>
+					@item.Name
+				</li>
+			}
+		</ul>
+
+		<a href="/Create"> Lägg till Anställd</a>
+
+
+
+	</main>
+</body>
+</html>
+
+
+
