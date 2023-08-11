@@ -1,4 +1,5 @@
-﻿@model EmployeesMvc.Models.Employee
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model EmployeesMvc.Models.Employee
 <!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -9,15 +10,15 @@
 </head>
 <body>
     <main>
-    <h2>Dogs</h2>
-		<form >
+    <h2>Anställd</h2>
+		<form asp-controller="Employees" asp-action="Add">
+			<label asp-for="Name"></label>
+			<input asp-for="Name">
+			<span asp-validation-for="Name"/>
 			
-			Name
-			<input type="text" name="Name">
-			Age
-			<input type="text" name="">
-			ID
-			<input type="text" name="Id">
+			<label asp-for="Email"/>
+			<input asp-for="Email">
+			<span asp-validation-for="Email"/>
 			<button>Lägg till anställd</button>
 		</form>
   </main>

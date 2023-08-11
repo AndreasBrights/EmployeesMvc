@@ -20,14 +20,17 @@ namespace EmployeesMvc.Controllers
         }
 
 		[HttpGet("/Create")]
-		public IActionResult Create(Employee dog)
+		public IActionResult Create(Employee employee)
 		{
-			return View(dog);
+			return View(employee);
 		}
 
 		[HttpPost("")]
 		public IActionResult Add(Employee employee)
 		{
+            //if (!ModelState.IsValid)
+            //    return View();
+
 			dataService.Add(employee);
 			return RedirectToAction(nameof(Index));
 		}

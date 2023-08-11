@@ -1,10 +1,20 @@
-﻿namespace EmployeesMvc.Models
+﻿using System.ComponentModel.DataAnnotations;
+namespace EmployeesMvc.Models
 {
     public class Employee
     {
+		[Display(Name = "Skriv namn")]
+		[DataType(DataType.MultilineText)]
+		[Required(ErrorMessage ="Skriv anställdas namn")]
+        [StringLength(20, MinimumLength = 2, ErrorMessage ="Måste vara mellan 2-20")]
         public string Name { get; set; }
-        public string Email { get; set; }
 
+       // [Display(Email = "test")]
+        
+        [Required(ErrorMessage ="Skriv anställdas Email")]
+        [EmailAddress]
+        public string Email { get; set; }
+        
         public int Id { get; set; }
 
 
