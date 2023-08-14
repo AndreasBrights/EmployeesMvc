@@ -19,7 +19,13 @@
 				<span asp-validation-for="Email"></span>
 				<input asp-for="Email">
 			</div>
-			@*<div asp-validation-summary=""></div>*@
+
+			<div>
+				<label asp-for="Details">Skriv en detail om anställda</label>
+				<span asp-validation-for="Details"></span>
+				<input asp-for="Details">
+			</div>
+
 			<button>Lägg till anställd</button>
 		</form>
 		
