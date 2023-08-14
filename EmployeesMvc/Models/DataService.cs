@@ -6,7 +6,7 @@ namespace EmployeesMvc.Models
     {
         List<Employee> employees = new List<Employee>
 		{
-			new Employee { Id = 0,  Name ="Felix", Email = "Felix@mail.se"},
+			new Employee { Id = 0,  Name ="Felix", Email = "Felix@mail.se", Details = "GIllar katter"},
 			new Employee { Id = 1,  Name ="Erik", Email = "Erik@mail.se"},
 			new Employee { Id = 2 ,  Name ="Movitz", Email = "Movitz@mail.se"},
 		};
@@ -22,9 +22,9 @@ namespace EmployeesMvc.Models
 			return employees.ToArray();
 		}
 
-		public Employee GetById(int id)
+		public Employee GetById(Employee employee)
 		{
-			return employees[id];
+			return employees[employee.Id];
 		}
 
 	}

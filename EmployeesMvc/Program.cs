@@ -1,3 +1,5 @@
+using EmployeesMvc.Models;
+
 namespace EmployeesMvc
 {
 	public class Program
@@ -7,7 +9,8 @@ namespace EmployeesMvc
 			var builder = WebApplication.CreateBuilder(args);
 
 			builder.Services.AddControllersWithViews();
-
+			//builder.Services.AddTransient<DataService>();
+			builder.Services.AddSingleton<DataService>();
 			var app = builder.Build();
 
 			app.UseRouting();

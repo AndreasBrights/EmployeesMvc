@@ -1,23 +1,18 @@
-﻿@model Employee[]
-@{
+﻿@{
 	Layout = "_Layout";
-}b
-<!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-	<meta charset="utf-8" />
-	<title>Employees </title>
-	<link rel="stylesheet" href="https://unpkg.com/@@picocss/pico@@latest/css/pico.classless.min.css">
-</head>
+}
+
+@model Employee
 <body>
 	<main>
 		<h2>Anställd</h2>
-		
-		 @*@Model.Name *@
-		 @*@Model.Details *@
-
+		<div>
+		 @Model.Name 
+		 @Model.Details
+		 <h2>@Model.Name</h2>
+		</div>
 		<a asp-controller ="Employees" asp-action="Index">gå tillbaka</a>
 		
 	</main>
 </body>
-</html>
+

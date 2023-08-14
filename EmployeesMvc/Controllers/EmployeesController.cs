@@ -1,15 +1,15 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using EmployeesMvc.Models;
+using System.Security.Cryptography.Xml;
 
 namespace EmployeesMvc.Controllers
 {
     public class EmployeesController : Controller
     {
-        static DataService dataService = new DataService(); 
-
-        public EmployeesController()
+		DataService dataService;
+        public EmployeesController(DataService dataService)
         {
-            //dataService = new DataService();
+			this.dataService = dataService;
         }
 
         [HttpGet("/")]
@@ -35,10 +35,11 @@ namespace EmployeesMvc.Controllers
 			return RedirectToAction(nameof(Index));
 		}
 
-		[HttpGet("/Details")]
+		[HttpGet("/Details/{id}")]
 		public IActionResult Details(Employee employee)
 		{
-			return View(employee);
+			var model = dataService.GetById(employee);
+			return View(model);
 		}
 
 	}
