@@ -6,9 +6,9 @@ namespace EmployeesMvc.Models
     {
         List<Employee> employees = new List<Employee>
 		{
-			new Employee { Id = 0, Name ="Felix", Email = "Felix@mail.se", Details = "Gillar klockor"},
-			new Employee { Id = 1, Name ="Erik", Email = "Erik@mail.se", Details = "Gillar tåg"},
-			new Employee { Id = 2, Name ="Movitz", Email = "Movitz@mail.se", Details ="Gillar katter"},
+			new Employee { Id = 0,  Name ="Felix", Email = "Felix@mail.se"},
+			new Employee { Id = 1,  Name ="Erik", Email = "Erik@mail.se"},
+			new Employee { Id = 2 ,  Name ="Movitz", Email = "Movitz@mail.se"},
 		};
 
 		public void Add(Employee employee)

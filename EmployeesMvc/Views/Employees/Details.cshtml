@@ -1,7 +1,8 @@
-﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
-@model EmployeesMvc.Models.Employee
+﻿@model Employee[]
+@{
+	Layout = "_Layout";
+}b
 <!DOCTYPE html>
-
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta charset="utf-8" />
@@ -12,8 +13,8 @@
 	<main>
 		<h2>Anställd</h2>
 		
-		 @Model.Name 
-		 @Model.Details 
+		 @*@Model.Name *@
+		 @*@Model.Details *@
 
 		<a asp-controller ="Employees" asp-action="Index">gå tillbaka</a>
 		

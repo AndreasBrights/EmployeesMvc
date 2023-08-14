@@ -1,0 +1,20 @@
+﻿
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="https://unpkg.com/@@picocss/pico@@latest/css/pico.classless.min.css">
+
+	<title>@ViewBag.Title</title>
+</head>
+<body>
+	<main>
+	<h1>@ViewBag.Title</h1>
+	<div>@RenderBody()</div>
+	<a asp-controller="Employees" asp-action="@ViewBag.link"> @ViewBag.link</a>
+	</main>
+	<footer> &copy; 2023 Mitt Företagsnamn. Alla rättigheter förbehållna. </footer>
+</body>
+	@RenderSection("scripts", false)
+</html>
