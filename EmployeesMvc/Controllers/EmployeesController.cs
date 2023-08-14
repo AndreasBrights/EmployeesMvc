@@ -35,7 +35,7 @@ namespace EmployeesMvc.Controllers
 			return RedirectToAction(nameof(Index));
 		}
 
-		[HttpGet("/Details")]
+		[HttpGet("/Details/{id}")]
 		public IActionResult Details(Employee employee)
 		{
 			return View(employee);

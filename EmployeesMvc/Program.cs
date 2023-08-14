@@ -9,7 +9,7 @@ namespace EmployeesMvc
 			var builder = WebApplication.CreateBuilder(args);
 
 			builder.Services.AddControllersWithViews();
-			builder.Services.AddTransient<Employee>();
+			builder.Services.AddSingleton<DataService>();
 
 			var app = builder.Build();
 

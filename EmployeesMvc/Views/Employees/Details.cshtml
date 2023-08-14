@@ -1,7 +1,7 @@
-﻿@model Employee[]
+﻿@model Employee
 @{
 	Layout = "_Layout";
-}b
+}
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -13,8 +13,8 @@
 	<main>
 		<h2>Anställd</h2>
 		
-		 @*@Model.Name *@
-		 @*@Model.Details *@
+		 @Model.Name
+		 <div>@Model.Details</div>
 
 		<a asp-controller ="Employees" asp-action="Index">gå tillbaka</a>
 		
