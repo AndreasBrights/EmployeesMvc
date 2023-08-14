@@ -1,3 +1,5 @@
+using EmployeesMvc.Models;
+
 namespace EmployeesMvc
 {
 	public class Program
@@ -7,6 +9,7 @@ namespace EmployeesMvc
 			var builder = WebApplication.CreateBuilder(args);
 
 			builder.Services.AddControllersWithViews();
+			builder.Services.AddTransient<Employee>();
 
 			var app = builder.Build();
 

@@ -5,11 +5,11 @@ namespace EmployeesMvc.Controllers
 {
     public class EmployeesController : Controller
     {
-        static DataService dataService = new DataService(); 
+        DataService dataService; 
 
-        public EmployeesController()
+        public EmployeesController(DataService dataService)
         {
-            //dataService = new DataService();
+			this.dataService = dataService;
         }
 
         [HttpGet("/")]
